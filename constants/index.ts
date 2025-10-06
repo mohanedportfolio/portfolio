@@ -92,12 +92,12 @@ export const SOCIALS = [
   {
     name: "Linkedin",
     icon: FaLinkedin,
-    link: "linkedin.com/in/mohaned-ahmed-650b84166/",
+    link: "https://linkedin.com/in/mohaned-ahmed-650b84166/",
   },
   {
     name: "Github",
     icon: FaGithub,
-    link: "github.com/mohaneduestc",
+    link: "https://github.com/mohaneduestc",
   },
 
 ] as const;
@@ -314,12 +314,12 @@ export const FOOTER_DATA = [
       {
         name: "Linkedin",
         icon: FaLinkedin,
-        link: "linkedin.com/in/mohaned-ahmed-650b84166/",
+        link: "https://linkedin.com/in/mohaned-ahmed-650b84166/",
       },
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "github.com/mohaneduestc",
+        link: "https://github.com/mohaneduestc",
       },
       // {
       //   name: "Discord",
@@ -367,5 +367,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+  sourceCode: "https://github.com/mohaneduestc",
 };
