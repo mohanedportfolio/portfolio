@@ -3,14 +3,18 @@
 import { Points, PointMaterial } from "@react-three/drei";
 import { Canvas, type PointsProps, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
-import { useState, useRef, Suspense } from "react";
+import { useMemo, useRef, Suspense } from "react";
 import type { Points as PointsType } from "three";
 
 export const StarBackground = (props: PointsProps) => {
   const ref = useRef<PointsType | null>(null);
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  
+  // Use useMemo instead of useState to ensure clean generation
+  const sphere = useMemo(() => {
+    const positions = new Float32Array(5000 * 3); // 5000 points * 3 coordinates
+    random.inSphere(positions, { radius: 1.2 });
+    return positions;
+  }, []);
 
   useFrame((_state, delta) => {
     if (ref.current) {
@@ -24,7 +28,7 @@ export const StarBackground = (props: PointsProps) => {
       <Points
         ref={ref}
         stride={3}
-        positions={new Float32Array(sphere)}
+        positions={sphere}
         frustumCulled
         {...props}
       >
