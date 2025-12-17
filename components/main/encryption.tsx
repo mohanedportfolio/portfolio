@@ -11,11 +11,10 @@ export const Encryption = () => {
       <motion.div
         variants={slideInFromTop}
         className="text-[40px] font-medium text-center text-gray-200"
+        {...({} as any)}
       >
         AI{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-          
-        </span>{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"></span>{" "}
         Technologies
       </motion.div>
 
@@ -32,8 +31,8 @@ export const Encryption = () => {
         <div className="rounded-2xl border border-gray-200 bg-transparent p-6 shadow-lg hover:shadow-xl transition">
           <h3 className="text-xl font-semibold mb-2 text-green-600">n8n</h3>
           <p className="text-gray-400">
-            I leverage n8n for workflow automations, connecting apps and APIs
-            to streamline processes efficiently.
+            I leverage n8n for workflow automations, connecting apps and APIs to
+            streamline processes efficiently.
           </p>
         </div>
       </div>
